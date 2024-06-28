@@ -1,0 +1,33 @@
+﻿<Window x:Class="RiverDataApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="River Data App" Height="350" Width="400">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0" Orientation="Horizontal" Margin="5">
+            <TextBlock Text="Наименование реки:" VerticalAlignment="Center"/>
+            <TextBox x:Name="txtRiverName" VerticalAlignment="Center" Width="200" Margin="5"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="1" Orientation="Horizontal" Margin="5">
+            <TextBlock Text="Длина реки (км):" VerticalAlignment="Center"/>
+            <TextBox x:Name="txtLength" VerticalAlignment="Center" Width="100" Margin="5"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="2" Orientation="Horizontal" Margin="5">
+            <TextBlock Text="Средняя глубина (м):" VerticalAlignment="Center"/>
+            <TextBox x:Name="txtAverageDepth" VerticalAlignment="Center" Width="100" Margin="5"/>
+        </StackPanel>
+
+        <Button Grid.Row="3" Content="Добавить реку" Width="150" HorizontalAlignment="Center" Margin="5"
+                Click="OnAddRiverClick"/>
+
+        <TextBlock Grid.Row="4" x:Name="txtResult" Margin="5"/>
+    </Grid>
+</Window>
